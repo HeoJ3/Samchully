@@ -11,19 +11,21 @@
 
 
 
-<script>
-    <!-->
-    var link-random = new Array()
-    link-random[0]="www.naver.com"
-    link-random[1]="www.daum.net"
-    
-    function linkrandom(){
-        window.location=link-random[Math.floor(Math.random()*link-random.length)]} 
-    >
-</script>
 
-<a href = "linkrandom[]">
-    <img src = "정명사상 카드뒷면.png">
-<alt=해당 이미지를 누르세요></alt></a>
+<img id="mainImage" src="정명사상 카드뒷면.png" onclick="showRandomImage()">
+<alt=해당 이미지를 누르세요></alt>
+<script>
+function showRandomImage() {
+  var images = ["정명사상 카드 1.png", "정명사상 카드 2.png", "정명사상 카드 3.png", "정명사상 카드 4.png", "정명사상 카드 5.png", "정명사상 카드 6.png"];
+  var randomIndex = Math.floor(Math.random() * images.length);
+  var randomImage = images[randomIndex];
+  document.getElementById("mainImage").src = randomImage;
+}
+</script>
  </body>
+
+
+        
+
+</html>
 
